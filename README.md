@@ -1,4 +1,4 @@
-📰 Fake News Detection
+## 📰 Fake News Detection
 
 A full end-to-end NLP system for detecting misinformation using TF-IDF + Logistic Regression and SBERT (MiniLM) sentence embeddings, featuring:
 
@@ -11,7 +11,7 @@ A full end-to-end NLP system for detecting misinformation using TF-IDF + Logisti
 ✅ Confusion Matrix + metrics
 ✅ Lightweight + production-ready structure
 
-✅ Features
+## ✅ Features
 | Feature                                 | Status |
 | --------------------------------------- | ------ |
 | TF-IDF baseline model                   | ✅      |
@@ -26,7 +26,7 @@ A full end-to-end NLP system for detecting misinformation using TF-IDF + Logisti
 | Model metrics + confusion matrix        | ✅      |
 | Swagger API docs                        | ✅      |
 
-📂 Project Structure
+## 📂 Project Structure
 
 fake-news-detection/
 │── api.py                     # FastAPI app
@@ -61,8 +61,9 @@ fake-news-detection/
     ├── ui_home.png
     ├── ui_explain.png
     └── api_docs.png
+
     
-🖼 Screenshots
+## 🖼 Screenshots
 ✅ Streamlit UI
 <img src="assets/ui_home.png" width="800"/>
 ✅ Explain Prediction
@@ -70,17 +71,18 @@ fake-news-detection/
 ✅ FastAPI – Swagger Docs
 <img src="assets/api_docs.png" width="800"/>
 
-## 📸 Screenshots
 <img width="1896" height="919" alt="image" src="https://github.com/user-attachments/assets/76707b80-e06e-4194-886c-4ac2cc1e2a52" />
 <img width="1909" height="919" alt="image" src="https://github.com/user-attachments/assets/3c9c735d-f4cb-4018-8ec5-65c02d54d9bc" />
 <img width="1491" height="885" alt="image" src="https://github.com/user-attachments/assets/42065059-42c2-4f1f-ae1d-1b7c9ccd1de5" />
 
-🚀 Installation
+
+## 🚀 Installation
 git clone https://github.com/krshrey10/Fake_News_Detection.git
 cd Fake_News_Detection
 pip install -r requirements.txt
 
-🧠 Training
+
+## 🧠 Training
 ✅ TF-IDF model
 python -m src.train
 
@@ -89,7 +91,8 @@ python -m src.train_sbert
 
 Outputs go into /models + /reports.
 
-📊 Model Results
+
+## 📊 Model Results
 | Model  | Vectorizer | Classifier          | F1 Score | Notes                   |
 | ------ | ---------- | ------------------- | -------: | ----------------------- |
 | TF-IDF | BoW        | Logistic Regression |     1.00 | Baseline                |
@@ -97,7 +100,9 @@ Outputs go into /models + /reports.
 
 ✅ Confusion matrix included in /reports/confusion_matrix.png
 
-💡 Explainability
+
+
+## 💡 Explainability
 
 The TF-IDF model supports per-sample feature contribution:
 
@@ -107,7 +112,7 @@ The TF-IDF model supports per-sample feature contribution:
 
 Shown in the Streamlit UI → Explain prediction
 
-🖥 Streamlit UI
+## 🖥 Streamlit UI
 
 Run locally:
 streamlit run streamlit_app.py
@@ -124,7 +129,9 @@ Local/Remote backend toggle
 
 Probability bars
 
-⚙️ FastAPI Inference Service
+
+
+## ⚙️ FastAPI Inference Service
 
 Start server:uvicorn api:app --host 0.0.0.0 --port 8000
 
@@ -132,7 +139,9 @@ Interactive docs:
 
 http://127.0.0.1:8000/docs
 
-🔌 API Usage
+
+
+## 🔌 API Usage
 ✅ Health Check
 curl http://127.0.0.1:8000/health
 
@@ -146,7 +155,9 @@ curl -X POST "http://127.0.0.1:8000/predict_batch" \
      -H "Content-Type: application/json" \
      -d "{\"texts\":[\"headline1\", \"headline2\"]}"
 
-📦 Future Work
+     
+
+## 📦 Future Work
 
 Fine-tuning full transformer model
 
@@ -158,13 +169,16 @@ Threshold tuning + calibration
 
 Simple deployment on Render
 
-📄 License
+## 📄 License
 
 MIT License
 
-✍ Author
+
+
+## ✍ Author
 
 Shreya K R
 🔗 GitHub: https://github.com/krshrey10
+
 
 
