@@ -1,0 +1,8 @@
+{
+  "model_type": "sbert_logreg",
+  "version": "v2.0.0",
+  "trained_at": "2025-11-07 21:49:26",
+  "accuracy": 1.0,
+  "f1_weighted": 1.0,
+  "encoder": "sentence-transformers/all-MiniLM-L6-v2"
+}

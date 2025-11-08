@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Data & models
+data/raw/*
+data/processed/*
+models/*
+!data/raw/sample/**
+
+# Logs & runs
+mlruns/
+wandb/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
