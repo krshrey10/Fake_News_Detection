@@ -1,32 +1,34 @@
-## 📰 Fake News Detection
+## Fake News Detection – End‑to‑End NLP Pipeline
+Production‑ready fake news classifier using TF‑IDF + Logistic Regression and SBERT (MiniLM) sentence embeddings, with explainability, FastAPI inference API, and an interactive Streamlit UI.
 
-A full end-to-end NLP system for detecting misinformation using TF-IDF + Logistic Regression and SBERT (MiniLM) sentence embeddings, featuring:
+## 🔍 What is this project?
+This repository implements an end‑to‑end misinformation detection system that classifies news headlines/text as real or fake.
+It includes both a classic TF‑IDF + Logistic Regression baseline and an SBERT (MiniLM) embedding model with a linear classifier.
 
-✅ Local + Remote inference (FastAPI)
-✅ Model explainability (top positive / negative word contributions)
-✅ Interactive Streamlit UI
-✅ Batch CSV prediction
-✅ Model metadata + versioning
-✅ Swagger/OpenAPI docs
-✅ Confusion Matrix + metrics
-✅ Lightweight + production-ready structure
+## Key goals:
 
-## ✅ Features
-| Feature                                 | Status |
-| --------------------------------------- | ------ |
-| TF-IDF baseline model                   | ✅      |
-| SBERT embedding model (MiniLM)          | ✅      |
-| Logistic Regression / Linear classifier | ✅      |
-| Explainability (top + / – features)     | ✅      |
-| Streamlit UI                            | ✅      |
-| Remote vs Local inference switch        | ✅      |
-| FastAPI inference service               | ✅      |
-| Batch CSV processing                    | ✅      |
-| Metadata + versioning                   | ✅      |
-| Model metrics + confusion matrix        | ✅      |
-| Swagger API docs                        | ✅      |
+Provide a simple but solid baseline for fake news detection.
 
-## 📂 Project Structure
+Show how to serve NLP models via FastAPI and Streamlit.
+
+Demonstrate explainability for TF‑IDF models (word‑level contributions).
+
+Offer a lightweight, production‑ready structure you can extend or deploy.
+
+## 🤔 Why this project?
+Fake news detection is a great playground for:
+
+Comparing bag‑of‑words vs. sentence embedding approaches.
+
+Deploying realistic NLP workflows (training → evaluation → API → UI).
+
+Exploring model explainability (why the model predicts “fake” vs “real”).
+
+Experimenting with local vs. remote inference and basic MLOps practices.
+
+This repo is designed as a template you can adapt to other text classification problems with minimal changes.
+
+## 🧱 Project structure
 
 fake-news-detection/
 │── api.py                     # FastAPI app
@@ -61,7 +63,43 @@ fake-news-detection/
     ├── ui_home.png
     ├── ui_explain.png
     └── api_docs.png
+    
 
+
+✨ Features
+Models
+
+TF‑IDF + Logistic Regression baseline.
+
+SBERT (MiniLM) sentence embeddings + Logistic Regression classifier.
+
+Explainability
+
+Per‑sample top positive / negative words (TF‑IDF model).
+
+Bar‑chart visualization and highlighted tokens in the UI.
+
+Serving
+
+FastAPI inference API (single and batch prediction).
+
+Streamlit UI for interactive use (text box + batch CSV upload).
+
+Local vs. remote inference toggle in the UI.
+
+Evaluation
+
+F1 score, accuracy, precision, recall.
+
+Confusion matrix plot saved under reports/.
+
+Model metadata and versioning JSON.
+
+Utilities
+
+Batch CSV prediction (CLI + API).
+
+Config‑driven training via config.yaml.
     
 ## 🖼 Screenshots
 ✅ Streamlit UI
@@ -100,8 +138,6 @@ Outputs go into /models + /reports.
 
 ✅ Confusion matrix included in /reports/confusion_matrix.png
 
-
-
 ## 💡 Explainability
 
 The TF-IDF model supports per-sample feature contribution:
@@ -129,8 +165,6 @@ Local/Remote backend toggle
 
 Probability bars
 
-
-
 ## ⚙️ FastAPI Inference Service
 
 Start server:uvicorn api:app --host 0.0.0.0 --port 8000
@@ -138,8 +172,6 @@ Start server:uvicorn api:app --host 0.0.0.0 --port 8000
 Interactive docs:
 
 http://127.0.0.1:8000/docs
-
-
 
 ## 🔌 API Usage
 ✅ Health Check
@@ -154,8 +186,6 @@ curl -X POST "http://127.0.0.1:8000/predict" \
 curl -X POST "http://127.0.0.1:8000/predict_batch" \
      -H "Content-Type: application/json" \
      -d "{\"texts\":[\"headline1\", \"headline2\"]}"
-
-     
 
 ## 📦 Future Work
 
@@ -173,12 +203,11 @@ Simple deployment on Render
 
 MIT License
 
-
-
 ## ✍ Author
 
 Shreya K R
 🔗 GitHub: https://github.com/krshrey10
+
 
 
 
