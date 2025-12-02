@@ -66,20 +66,21 @@ fake-news-detection/
     
 
 
-✨ Features
-Models
+## ✨ Features
+
+## Models
 
 TF‑IDF + Logistic Regression baseline.
 
 SBERT (MiniLM) sentence embeddings + Logistic Regression classifier.
 
-Explainability
+## Explainability
 
 Per‑sample top positive / negative words (TF‑IDF model).
 
 Bar‑chart visualization and highlighted tokens in the UI.
 
-Serving
+## Serving
 
 FastAPI inference API (single and batch prediction).
 
@@ -87,7 +88,7 @@ Streamlit UI for interactive use (text box + batch CSV upload).
 
 Local vs. remote inference toggle in the UI.
 
-Evaluation
+## Evaluation
 
 F1 score, accuracy, precision, recall.
 
@@ -95,7 +96,7 @@ Confusion matrix plot saved under reports/.
 
 Model metadata and versioning JSON.
 
-Utilities
+## Utilities
 
 Batch CSV prediction (CLI + API).
 
@@ -128,7 +129,6 @@ python -m src.train
 python -m src.train_sbert
 
 Outputs go into /models + /reports.
-
 
 ## 📊 Model Results
 | Model  | Vectorizer | Classifier          | F1 Score | Notes                   |
@@ -207,6 +207,7 @@ MIT License
 
 Shreya K R
 🔗 GitHub: https://github.com/krshrey10
+
 
 
 
