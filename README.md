@@ -31,38 +31,38 @@ This repo is designed as a template you can adapt to other text classification p
 ## 🧱 Project structure
 
 fake-news-detection/
-│── api.py                     # FastAPI app
-│── streamlit_app.py           # Streamlit UI
-│── config.yaml                # Training config
-│── requirements.txt
-│── Makefile
+├── api.py # FastAPI app
+├── streamlit_app.py # Streamlit UI
+├── config.yaml # Training config
+├── requirements.txt
+├── Makefile
 │
 ├── src/
-│   ├── train.py               # TF-IDF training
-│   ├── train_sbert.py         # SBERT + classifier
-│   ├── infer.py               # CLI inference
-│   ├── metrics.py
-│   ├── features.py
-│   ├── utils.py
-│   └── data.py
+│ ├── train.py # TF-IDF training
+│ ├── train_sbert.py # SBERT + classifier
+│ ├── infer.py # CLI inference
+│ ├── metrics.py
+│ ├── features.py
+│ ├── utils.py
+│ └── data.py
 │
 ├── models/
-│   ├── fake_news_pipeline.joblib
-│   └── fake_news_sbert.joblib
+│ ├── fake_news_pipeline.joblib
+│ └── fake_news_sbert.joblib
 │
 ├── reports/
-│   ├── confusion_matrix.png
-│   ├── metrics.txt
-│   ├── model_meta.json
-│   └── sbert_meta.json
+│ ├── confusion_matrix.png
+│ ├── metrics.txt
+│ ├── model_meta.json
+│ └── sbert_meta.json
 │
 ├── data/
-│   └── train.csv
+│ └── train.csv
 │
 └── assets/
-    ├── ui_home.png
-    ├── ui_explain.png
-    └── api_docs.png
+├── ui_home.png
+├── ui_explain.png
+└── api_docs.png
     
 
 
@@ -207,6 +207,7 @@ MIT License
 
 Shreya K R
 🔗 GitHub: https://github.com/krshrey10
+
 
 
 
